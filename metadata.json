@@ -1,0 +1,6 @@
+{
+  "name": "성경 인물 유형 테스트 (Bible Type Test)",
+  "description": "당신의 성격과 가치관을 바탕으로 당신과 가장 닮은 성경 속 인물을 찾아주는 심리 테스트 서비스입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
