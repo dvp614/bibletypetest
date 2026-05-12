@@ -61,13 +61,13 @@ export const ResultSection: React.FC<ResultSectionProps> = ({
     kjv: t('bible.kjv') || 'KJV',
   };
 
-  const handleShare = () => {
+  const handleShare = async () => {
     const shareText = t('result.shareText', {
       name: getLoc(character.name, language),
       title: getLoc(character.title, language)
     });
     const baseUrl = window.location.origin + window.location.pathname;
-    const resultUrl = `${baseUrl}?result=${character.id}`;
+    const resultUrl = `${baseUrl}?result=${character.id}&lang=${language}`;
     
     let copyText = shareText;
     
@@ -89,29 +89,53 @@ export const ResultSection: React.FC<ResultSectionProps> = ({
       setTimeout(() => setShowToast(false), 3000);
     };
 
-    if (navigator.share) {
-      navigator.share(shareData).catch((err) => {
-        // If aborted by user, it throws an AbortError. We shouldn't show copied toast.
-        // If it fails for other reasons, fallback to clipboard.
+    // 1. Always attempt synchronous fallback copy FIRST to utilize the click user-gesture 
+    // before any async await yields control.
+    let syncCopied = false;
+    try {
+      const textArea = document.createElement("textarea");
+      textArea.value = copyText;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      syncCopied = document.execCommand('copy');
+      textArea.remove();
+    } catch (e) {
+      console.warn("Sync copy failed", e);
+    }
+
+    // 2. Check if mobile
+    const isMobile = typeof navigator !== 'undefined' && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile && navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch (err: any) {
         if (err.name !== 'AbortError') {
-          navigator.clipboard.writeText(copyText).then(showSuccess).catch(console.error);
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+             navigator.clipboard.writeText(copyText).then(showSuccess).catch(() => {
+               if (syncCopied) showSuccess();
+             });
+          } else if (syncCopied) {
+             showSuccess();
+          }
         }
-      });
+      }
     } else {
-      navigator.clipboard.writeText(copyText).then(showSuccess).catch(() => {
-        // Fallback for browsers that don't support clipboard API directly
-        const textArea = document.createElement("textarea");
-        textArea.value = copyText;
-        document.body.appendChild(textArea);
-        textArea.select();
-        try {
-          document.execCommand('copy');
-          showSuccess();
-        } catch (err) {
-          console.error("Copy failed", err);
-        }
-        document.body.removeChild(textArea);
-      });
+      // For PC, fallback to clipboard API
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(copyText).then(showSuccess).catch((err) => {
+          console.warn("Clipboard API failed, using sync fallback:", err);
+          if (syncCopied) showSuccess();
+        });
+      } else if (syncCopied) {
+        showSuccess();
+      } else {
+        alert(t('result.copyFailed') || 'Copy failed :(');
+      }
     }
   };
 

@@ -138,8 +138,14 @@ const uiTranslations: Partial<Record<Language, Record<string, string>>> = {
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguageState] = useState<Language>(() => {
     if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const urlLang = params.get('lang');
+      if (urlLang === 'ko' || urlLang === 'en' || urlLang === 'cn' || urlLang === 'jp') {
+        return urlLang as Language;
+      }
+
       const saved = localStorage.getItem('app_lang');
-      if (saved === 'ko' || saved === 'en') return saved as Language;
+      if (saved === 'ko' || saved === 'en' || saved === 'cn' || saved === 'jp') return saved as Language;
       
       const browserLang = navigator.language.split('-')[0];
       if (browserLang === 'en') return 'en';

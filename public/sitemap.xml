@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://bibletypetest.com/</loc>
+    <lastmod>2024-03-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bibletypetest.com/?lang=ko"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bibletypetest.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="cn" href="https://bibletypetest.com/?lang=cn"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://bibletypetest.com/?lang=jp"/>
+  </url>
+</urlset>
