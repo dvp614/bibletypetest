@@ -1497,8 +1497,8 @@ export const CHARACTERS: Record<string, Character> = {
         }
       ]
     },
-    "imageUrl": "/images/peter.png",
-    "resultImageUrl": "/images/results/peter_result.png",
+    "imageUrl": "/images/peter.webp",
+    "resultImageUrl": "/images/results/peter_result.webp",
     "strengths": {
       "ko": [
         "빠른 상황 대처와 추진력",
@@ -1618,8 +1618,8 @@ export const CHARACTERS: Record<string, Character> = {
         }
       ]
     },
-    "imageUrl": "/images/paul.png",
-    "resultImageUrl": "/images/results/paul_result.png",
+    "imageUrl": "/images/paul.webp",
+    "resultImageUrl": "/images/results/paul_result.webp",
     "strengths": {
       "ko": [
         "분석적 사고를 통한 전략 수립",
@@ -1739,8 +1739,8 @@ export const CHARACTERS: Record<string, Character> = {
         }
       ]
     },
-    "imageUrl": "/images/mary.png",
-    "resultImageUrl": "/images/results/mary_result.png",
+    "imageUrl": "/images/mary.webp",
+    "resultImageUrl": "/images/results/mary_result.webp",
     "strengths": {
       "ko": [
         "타인의 필요를 읽는 예민한 관찰력",
@@ -1860,8 +1860,8 @@ export const CHARACTERS: Record<string, Character> = {
         }
       ]
     },
-    "imageUrl": "/images/david.png",
-    "resultImageUrl": "/images/results/david_result.png",
+    "imageUrl": "/images/david.webp",
+    "resultImageUrl": "/images/results/david_result.webp",
     "strengths": {
       "ko": [
         "경계를 허무는 창의적 문제해결",
@@ -1981,8 +1981,8 @@ export const CHARACTERS: Record<string, Character> = {
         }
       ]
     },
-    "imageUrl": "/images/joseph.png",
-    "resultImageUrl": "/images/results/joseph_result.png",
+    "imageUrl": "/images/joseph.webp",
+    "resultImageUrl": "/images/results/joseph_result.webp",
     "strengths": {
       "ko": [
         "리스크를 최소화하는 계획 능력",
@@ -2102,8 +2102,8 @@ export const CHARACTERS: Record<string, Character> = {
         }
       ]
     },
-    "imageUrl": "/images/esther.png",
-    "resultImageUrl": "/images/results/esther_result.png",
+    "imageUrl": "/images/esther.webp",
+    "resultImageUrl": "/images/results/esther_result.webp",
     "strengths": {
       "ko": [
         "본질을 꿰뚫는 예리한 직관",
@@ -2223,8 +2223,8 @@ export const CHARACTERS: Record<string, Character> = {
         }
       ]
     },
-    "imageUrl": "/images/moses.png",
-    "resultImageUrl": "/images/results/moses_result.png",
+    "imageUrl": "/images/moses.webp",
+    "resultImageUrl": "/images/results/moses_result.webp",
     "strengths": {
       "ko": [
         "장기적인 목표를 향한 인내심",
@@ -2344,8 +2344,8 @@ export const CHARACTERS: Record<string, Character> = {
         }
       ]
     },
-    "imageUrl": "/images/ruth.png",
-    "resultImageUrl": "/images/results/ruth_result.png",
+    "imageUrl": "/images/ruth.webp",
+    "resultImageUrl": "/images/results/ruth_result.webp",
     "strengths": {
       "ko": [
         "시련 속에서도 잃지 않는 긍정적 태도",
@@ -2465,8 +2465,8 @@ export const CHARACTERS: Record<string, Character> = {
         }
       ]
     },
-    "imageUrl": "/images/daniel.png",
-    "resultImageUrl": "/images/results/daniel_result.png",
+    "imageUrl": "/images/daniel.webp",
+    "resultImageUrl": "/images/results/daniel_result.webp",
     "strengths": {
       "ko": [
         "복잡한 문제를 단순화하는 논리적 명쾌함",
@@ -2586,8 +2586,8 @@ export const CHARACTERS: Record<string, Character> = {
         }
       ]
     },
-    "imageUrl": "/images/noah.png",
-    "resultImageUrl": "/images/results/noah_result.png",
+    "imageUrl": "/images/noah.webp",
+    "resultImageUrl": "/images/results/noah_result.webp",
     "strengths": {
       "ko": [
         "목표를 향한 지치지 않는 실행력",
@@ -2707,8 +2707,8 @@ export const CHARACTERS: Record<string, Character> = {
         }
       ]
     },
-    "imageUrl": "/images/abraham.png",
-    "resultImageUrl": "/images/results/abraham_result.png",
+    "imageUrl": "/images/abraham.webp",
+    "resultImageUrl": "/images/results/abraham_result.webp",
     "strengths": {
       "ko": [
         "리스크를 두려워하지 않는 용기",
@@ -2828,8 +2828,8 @@ export const CHARACTERS: Record<string, Character> = {
         }
       ]
     },
-    "imageUrl": "/images/gideon.png",
-    "resultImageUrl": "/images/results/gideon_result.png",
+    "imageUrl": "/images/gideon.webp",
+    "resultImageUrl": "/images/results/gideon_result.webp",
     "strengths": {
       "ko": [
         "빈틈없는 논리와 효율성 추구",

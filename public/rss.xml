@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>성경 인물 테스트: 나의 영적 유형은?</title>
+  <link>https://bibletypetest.com/</link>
+  <description>나와 닮은 성경 속 인물은 누구일까요? 20가지 상황 문답을 통해 당신의 성격과 삶의 방식을 확인해보세요.</description>
+  <language>ko</language>
+  <atom:link href="https://bibletypetest.com/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>성경 인물 테스트: 나의 영적 유형은?</title>
+    <link>https://bibletypetest.com/</link>
+    <description>나와 닮은 성경 속 인물은 누구일까요? 20가지 상황 문답을 통해 당신의 성격과 삶의 방식을 확인해보세요.</description>
+    <guid>https://bibletypetest.com/</guid>
+    <pubDate>Fri, 10 May 2024 00:00:00 GMT</pubDate>
+  </item>
+</channel>
+</rss>

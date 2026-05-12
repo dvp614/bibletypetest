@@ -16,6 +16,7 @@ import { CollectionModal } from './components/CollectionModal';
 import { LegalModal } from './components/LegalModal';
 import { TestSection } from './components/TestSection';
 import { ResultSection } from './components/ResultSection';
+import { useImagePreload } from './hooks/useImagePreload';
 
 type AppState = 'START' | 'TEST' | 'RESULT';
 type LegalPage = 'privacy' | 'terms' | 'about' | null;
@@ -88,6 +89,9 @@ function AppContent() {
   const [showCollection, setShowCollection] = useState(false);
   const [legalPage, setLegalPage] = useState<LegalPage>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Preload images silently during the test to ensure instantaneous render of results
+  useImagePreload(state);
 
   /**
    * Automatically updates React Helmet-style native SEO tags based on language & state
